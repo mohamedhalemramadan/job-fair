@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch data from API
     function fetchData() {
-        fetch('http://localhost:3000/customers')
+        fetch(' https://my-json-server.typicode.com/mohamedhalemramadan/job-fair/customers')
             .then(response => response.json())
             .then(data => {
                 customers = data;
-                return fetch('http://localhost:3000/transactions');
+                return fetch('https://my-json-server.typicode.com/mohamedhalemramadan/job-fair/transactions');
             })
             .then(response => response.json())
             .then(data => {
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 displayTable(customers, transactions);
             });
     }
-
     // Display table with filtered data
     function displayTable(customers, transactions) {
         customerTableBody.innerHTML = '';
