@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fetch data from API
     function fetchData() {
-        fetch(' https://my-json-server.typicode.com/mohamedhalemramadan/job-fair/customers')
+        fetch('https://my-json-server.typicode.com/mohamedhalemramadan/job-fair/customers')
             .then(response => response.json())
             .then(data => {
                 customers = data;
